@@ -1,0 +1,45 @@
+﻿@page
+@model GoglikaRazor.Pages.Students.CreateModel
+
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3">Insert Student</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Student.FirstName"></label>
+            <input asp-for="Student.FirstName" class="form-control" />
+            <span asp-validation-for="Student.FirstName" class="text-warning"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Student.LastName"></label>
+            <input asp-for="Student.LastName" class="form-control" />
+            <span asp-validation-for="Student.LastName" class="text-warning"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Student.Age"></label>
+            <input asp-for="Student.Age" class="form-control" />
+            <span asp-validation-for="Student.Age" class="text-warning"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Student.Address"></label>
+            <input asp-for="Student.Address" class="form-control" />
+            <span asp-validation-for="Student.Address" class="text-warning"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Student.PhoneNumber"></label>
+            <input asp-for="Student.PhoneNumber" class="form-control" />
+            <span asp-validation-for="Student.PhoneNumber" class="text-warning"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Insert</button>
+        <a asp-page="Index" class="btn btn-secondary" style="width:150px">Back To List</a>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
